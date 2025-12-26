@@ -6,7 +6,6 @@ import br.com.neckel.domain.repository.UserRepository
 
 import java.util.UUID
 import scala.concurrent.{ExecutionContext, Future}
-import scala.util.{Failure, Success}
 
 class UserService(repository: UserRepository) {
 

@@ -1,6 +1,6 @@
 import sbt.*
 
-object Dependecies {
+object Dependencies {
 
   object Versions {
     val akka = "2.10.11"

@@ -11,7 +11,7 @@ import scala.jdk.CollectionConverters._
 class FakeUserRepository()(implicit executor: ExecutionContext) extends UserRepository {
   private val db = new ConcurrentHashMap[UUID, User]()
 
-  override def save(user: User): Future[_] =
+  override def save(user: User): Future[Unit] =
     Future(db.put(user.id, user))
 
   override def findById(id: UUID): Future[Option[User]] =
@@ -20,6 +20,6 @@ class FakeUserRepository()(implicit executor: ExecutionContext) extends UserRepo
   override def listAll(): Future[List[User]] =
     Future(db.values().asScala.toList)
 
-  override def delete(id: UUID): Future[_] =
+  override def delete(id: UUID): Future[Unit] =
     Future(db.remove(id))
 }
