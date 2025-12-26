@@ -1,4 +1,4 @@
-package br.com.neckel.interface.http.serialization
+package br.com.neckel.interface.support
 
 import akka.http.scaladsl.marshalling.{Marshaller, ToEntityMarshaller}
 import akka.http.scaladsl.model.{ContentTypes, HttpEntity}

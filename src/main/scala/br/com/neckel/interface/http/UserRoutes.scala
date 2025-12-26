@@ -5,7 +5,7 @@ import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.server.{Directive1, Route}
 import br.com.neckel.application.dto.CreateUser
 import br.com.neckel.application.usecase.UserService
-import br.com.neckel.interface.http.serialization.JsonSupport
+import br.com.neckel.interface.support.JsonSupport
 
 import java.util.UUID
 import scala.concurrent.ExecutionContext
