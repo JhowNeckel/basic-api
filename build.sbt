@@ -11,15 +11,15 @@ lazy val root = (project in file("."))
   .settings(
     name := "basic-api",
     libraryDependencies ++= Seq(
-      Dependecies.akka,
-      Dependecies.akkaHttp,
-      Dependecies.akkaStreams,
-      Dependecies.akkaStreamsTyped,
-      Dependecies.jackson,
-      Dependecies.jacksonScala,
-      Dependecies.jacksonJavaTime,
-      Dependecies.scalatest,
-      Dependecies.akkaHttpTestkit
+      Dependencies.akka,
+      Dependencies.akkaHttp,
+      Dependencies.akkaStreams,
+      Dependencies.akkaStreamsTyped,
+      Dependencies.jackson,
+      Dependencies.jacksonScala,
+      Dependencies.jacksonJavaTime,
+      Dependencies.scalatest,
+      Dependencies.akkaHttpTestkit
     )
   )
 
