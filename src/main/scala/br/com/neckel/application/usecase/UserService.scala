@@ -1,6 +1,6 @@
 package br.com.neckel.application.usecase
 
-import br.com.neckel.application.dto.CreateUser
+import br.com.neckel.application.dto.{CreateUser, UserOutput}
 import br.com.neckel.domain.model.User
 import br.com.neckel.domain.repository.UserRepository
 
@@ -9,13 +9,12 @@ import scala.concurrent.{ExecutionContext, Future}
 
 class UserService(repository: UserRepository) {
 
-  def create(input: CreateUser)(implicit executor: ExecutionContext): Future[User] =
+  def create(input: CreateUser)(implicit executor: ExecutionContext): Future[UserOutput] =
     input.name.trim match {
       case name if name.isEmpty => Future failed new IllegalStateException("user name must not be empty")
       case name =>
         val user = User(UUID.randomUUID(), name)
-
-        repository.save(user).map(_ => user)
+        repository.save(user).map(_ => UserOutput(user.id, user.name))
     }
 
   def get(id: UUID): Future[Option[User]] =
