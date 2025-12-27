@@ -51,3 +51,8 @@ build/
 /.idea/vcs.xml
 /.idea/workspace.xml
 /.idea/sbt.xml
+/.idea/codeStyles/codeStyleConfig.xml
+/.idea/data_source_mapping.xml
+/.idea/dataSources.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/.gitignore

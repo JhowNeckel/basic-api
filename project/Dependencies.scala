@@ -7,6 +7,8 @@ object Dependencies {
     val akkaHttp = "10.7.3"
     val jackson = "2.20.1"
     val scalatest = "3.2.19"
+    val doobie = "1.0.0-RC11"
+    val sqlite = "3.51.1.0"
   }
 
   val akka = "com.typesafe.akka" %% "akka-actor-typed" % Versions.akka
@@ -18,5 +20,8 @@ object Dependencies {
   val jacksonJavaTime = "com.fasterxml.jackson.datatype" % "jackson-datatype-jsr310" % Versions.jackson
   val scalatest = "org.scalatest" %% "scalatest" % Versions.scalatest % Test
   val akkaHttpTestkit = "com.typesafe.akka" %% "akka-http-testkit" % Versions.akkaHttp % Test
+  val doobieCore = "org.tpolecat" %% "doobie-core" % Versions.doobie
+  val doobieHikari = "org.tpolecat" %% "doobie-hikari" % Versions.doobie
+  val sqlite = "org.xerial"   %  "sqlite-jdbc"  % Versions.sqlite
 
 }

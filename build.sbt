@@ -19,7 +19,10 @@ lazy val root = (project in file("."))
       Dependencies.jacksonScala,
       Dependencies.jacksonJavaTime,
       Dependencies.scalatest,
-      Dependencies.akkaHttpTestkit
+      Dependencies.akkaHttpTestkit,
+      Dependencies.doobieCore,
+      Dependencies.doobieHikari,
+      Dependencies.sqlite
     )
   )
 
