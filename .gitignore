@@ -56,3 +56,4 @@ build/
 /.idea/dataSources.xml
 /.idea/inspectionProfiles/Project_Default.xml
 /.idea/.gitignore
+/.idea/sqldialects.xml

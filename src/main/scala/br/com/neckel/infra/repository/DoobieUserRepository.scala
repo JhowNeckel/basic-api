@@ -23,7 +23,12 @@ class DoobieUserRepository(implicit executor: ExecutionContext, rt: IORuntime) e
   }
 
   override def save(user: User): Future[Unit] =
-    sql"""INSERT INTO users (id, name) VALUES (${user.id}, ${user.name}) ON CONFLICT(id) DO UPDATE SET name  = excluded.name""".update.run.void.transact(db.xa).unsafeToFuture()
+    sql"""
+      INSERT INTO users (id, name)
+      VALUES (${user.id}, ${user.name})
+      ON CONFLICT(id) DO UPDATE SET
+        name  = excluded.name
+    """.update.run.void.transact(db.xa).unsafeToFuture()
 
   override def delete(id: UUID): Future[Unit] =
     sql"""DELETE FROM users WHERE id = $id""".update.run.void.transact(db.xa).unsafeToFuture()
